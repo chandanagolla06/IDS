@@ -1,0 +1,95 @@
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <header className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-primary mb-2">Token Transfer System</h1>
+          <p className="text-gray-600">Create and transfer fungible tokens</p>
+        </header>
+
+        <main>
+          <section className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Create New Token</h2>
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="tokenName" className="block text-gray-700 mb-2">Token Name:</label>
+                <input 
+                  type="text" 
+                  id="tokenName" 
+                  className="w-full p-2 border rounded focus:ring-2 focus:ring-primary focus:outline-none"
+                  placeholder="Enter token name"
+                />
+              </div>
+              <div>
+                <label htmlFor="tokenSymbol" className="block text-gray-700 mb-2">Token Symbol:</label>
+                <input 
+                  type="text" 
+                  id="tokenSymbol" 
+                  className="w-full p-2 border rounded focus:ring-2 focus:ring-primary focus:outline-none"
+                  placeholder="Enter token symbol"
+                />
+              </div>
+              <div>
+                <label htmlFor="initialSupply" className="block text-gray-700 mb-2">Initial Supply:</label>
+                <input 
+                  type="number" 
+                  id="initialSupply" 
+                  className="w-full p-2 border rounded focus:ring-2 focus:ring-primary focus:outline-none"
+                  placeholder="Enter initial supply"
+                  min="0"
+                />
+              </div>
+              <button 
+                type="submit" 
+                className="w-full bg-primary text-white py-2 px-4 rounded hover:bg-primary/90 transition-colors"
+              >
+                Create Token
+              </button>
+            </form>
+          </section>
+
+          <section className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Transfer Tokens</h2>
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="recipient" className="block text-gray-700 mb-2">Recipient Address:</label>
+                <input 
+                  type="text" 
+                  id="recipient" 
+                  className="w-full p-2 border rounded focus:ring-2 focus:ring-primary focus:outline-none"
+                  placeholder="Enter recipient address"
+                />
+              </div>
+              <div>
+                <label htmlFor="amount" className="block text-gray-700 mb-2">Amount:</label>
+                <input 
+                  type="number" 
+                  id="amount" 
+                  className="w-full p-2 border rounded focus:ring-2 focus:ring-primary focus:outline-none"
+                  placeholder="Enter amount to transfer"
+                  min="0"
+                />
+              </div>
+              <button 
+                type="submit" 
+                className="w-full bg-primary text-white py-2 px-4 rounded hover:bg-primary/90 transition-colors"
+              >
+                Transfer Tokens
+              </button>
+            </form>
+          </section>
+
+          <section className="bg-white rounded-lg shadow-md p-6">
+            <h2 className="text-2xl font-bold mb-4">Account Balance</h2>
+            <div className="text-center">
+              <p className="text-4xl font-bold text-primary">1,000,000 TKN</p>
+              <p className="text-gray-600 mt-2">Available Balance</p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  );
+};
+
+export default Index;
